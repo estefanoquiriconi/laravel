@@ -16,7 +16,7 @@
     <ul>
         
         @foreach ($users as $user)
-        <li>{{ $user->name }}</li>
+        <li>{{ $user->name }} -- {{$user->age}} years old </li>
         @endforeach
     </ul>
     @endif

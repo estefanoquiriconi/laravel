@@ -4,18 +4,21 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
     public function index()
     {
+        // $users = User::where('age', '>=', 30)->get();
+        // $users = User::where('age', '>=', 30)->orderBy('age', 'asc')->get();
         $users = User::all();
         return view('user.index', compact('users'));
     }
 
     public function create()
-    {
+    { 
         // $user = new User();
         // $user->name = "Estéfano";
         // $user->email = "demo@example.com";
