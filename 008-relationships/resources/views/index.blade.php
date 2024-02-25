@@ -9,6 +9,7 @@
 
 <body>
     <h1>{{ $user->name }} Roles: </h1>
+    {{-- <h3>{{ $user->phoneSim->company }}</h3> --}}
     <ul>
         @foreach ($user->roles as $role)
             <li>{{ $role->name }} Added by: {{ $role->pivot->added_by }} </li>
