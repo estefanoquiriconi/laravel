@@ -35,7 +35,8 @@ class UserResource extends JsonResource
                     'role' => $role->name,
                     'added_by' => $role->pivot->added_by
                 ];
-            })
+            }),
+            'image' => $this->image
         ];
     }
 }
