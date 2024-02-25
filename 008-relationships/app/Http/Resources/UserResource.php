@@ -29,6 +29,12 @@ class UserResource extends JsonResource
                     'prefix' => $phone->prefix,
                     'phone_number' => $phone->phone_number,
                 ];
+            }),
+            'roles' => $this->roles->map(function ($role) {
+                return [
+                    'role' => $role->name,
+                    'added_by' => $role->pivot->added_by
+                ];
             })
         ];
     }
