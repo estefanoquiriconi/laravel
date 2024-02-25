@@ -18,5 +18,11 @@ class PhoneSeeder extends Seeder
             "phone_number" => "405864",
             "user_id" => 1,
         ]);
+
+        Phone::create([
+            "prefix" => "385",
+            "phone_number" => "547863",
+            "user_id" => 2,
+        ]);
     }
 }

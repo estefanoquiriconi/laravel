@@ -19,10 +19,17 @@ class UserResource extends JsonResource
             'name' => $this->name,
             'email' => $this->email,
             // 'phone' => '('.$this->phone->prefix.')'.$this->phone->phone_number,
-            'phone'=> [
-                'prefix' => $this->phone->prefix,
-                'phone_number' => $this->phone->phone_number,
-            ],
+            // 'phone' => [
+            //     'prefix' => $this->phone->prefix,
+            //     'phone_number' => $this->phone->phone_number,
+            // ],
+            // 'phone' => $this->phones
+            'phones' => $this->phones->map(function ($phone) {
+                return [
+                    'prefix' => $phone->prefix,
+                    'phone_number' => $phone->phone_number,
+                ];
+            })
         ];
     }
 }
