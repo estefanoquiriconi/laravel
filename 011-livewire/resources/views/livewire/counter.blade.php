@@ -1,8 +1,11 @@
 <div>
-    <h1>{{ $count }}</h1>
-    <button wire:click="increment">Increment</button>
-
-    <input type="text" wire:model="username">
-    <br>
-    <h3>{{ $username }}</h3>
+    <input type="text" wire:model="note">
+    <button wire:click="store">Save note</button>
+    <p style="color: red"> {{ $feedback }} </p>
+    @foreach ($notes as $note)
+        <p>{{ $note->content }}
+            <button wire:click="update('{{ $note->id }}')">Update</button>
+            <button wire:click="destroy('{{ $note->id }}')">Delete</button>
+        </p>
+    @endforeach
 </div>
