@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+    @include('_partials.lang')
     <h1>{{ $msg }}</h1>
 </body>
 </html>

@@ -831,6 +831,7 @@
 </head>
 
 <body class="antialiased">
+    @include('_partials.lang')
     <h1>{{ __('welcome.hello') }}</h1>
 </body>
 
