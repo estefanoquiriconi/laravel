@@ -14,7 +14,7 @@ class OrderController extends Controller
             'user_id' => 10,
             'amount' => 25,
         ]);
-        CreateOrderEvent::dispatch($order);
+        // CreateOrderEvent::dispatch($order);
         return response()->json("Éxito");
     }
 }
